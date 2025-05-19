@@ -1,0 +1,175 @@
+/* Filepath: x:/Programming/Python/[Y2S2] Year 2, Spring semester/[Y2S2] Database Management Systems/Final project - Group assignment/my-library-gui/src/components/common/Sidebar.module.css */
+.sidebar {
+    width: 100%;
+    /* Takes full width of its wrapper from SidebarLayout */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: var(--spacing-lg) 0;
+    /* Vertical padding, horizontal will be on links */
+    transition: width 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.collapsed {
+    width: 80px !important;
+    min-width: 80px !important;
+    padding: var(--spacing-lg) 0;
+}
+
+.collapsed .logoContainer {
+    justify-content: center;
+    padding: 0;
+    margin-bottom: var(--spacing-md);
+    /* border-bottom-right-radius: 1.5rem; */
+    margin-top: 58px;
+}
+
+.collapsed .logoText {
+    display: none;
+}
+
+.collapsed .navList {
+    padding: 0;
+}
+
+.collapsed .navLink {
+    justify-content: center;
+    padding: var(--spacing-sm) 0;
+    margin: 0 8px;
+}
+
+.collapsed .navLinkIcon {
+    margin-right: 0;
+    display: flex;
+    justify-content: center;
+    font-size: 1.6rem;
+}
+
+.collapsed .navLinkLabel {
+    display: none;
+}
+
+.navLink[title]:hover::after {
+    content: attr(title);
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--sidebar-tooltip-bg, #262221);
+    color: #fff;
+    padding: 4px 12px;
+    border-radius: 6px;
+    white-space: nowrap;
+    font-size: 0.95rem;
+    margin-left: 10px;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    pointer-events: none;
+    opacity: 1;
+}
+
+.logoContainer {
+    /* padding: 0 var(--spacing-md) var(--spacing-lg) var(--spacing-md); */
+    padding-bottom: 2px;
+    margin-bottom: var(--spacing-md);
+    text-align: center;
+    /* Or left, depending on logo design */
+    /* border-bottom: 1px solid var(--light-gray-lines); */
+    /* border-bottom-right-radius: 0.5rem; */
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    margin-top: 12px;
+    /* Move the line lower to align with nav bar bottom */
+    overflow: hidden;
+}
+
+.logoText {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--primary-accent);
+    /* Add more logo styling here if needed */
+}
+
+.navList {
+    list-style: none;
+    padding: 0 var(--spacing-sm);
+    /* Padding for the nav list itself */
+    margin: 0;
+    flex-grow: 1;
+    /* Allows nav to take available space */
+    overflow-y: auto;
+    /* Scroll if many items */
+    position: relative;
+}
+
+.navItem {
+    margin: var(--spacing-xxs) 0;
+    /* Small margin between items */
+}
+
+.navLink {
+    display: flex;
+    align-items: center;
+    padding: var(--spacing-sm) 14px;
+    color: var(--sidebar-text-color);
+    text-decoration: none;
+    border-radius: var(--border-radius-md);
+    transition: background-color var(--transition-fast), color var(--transition-fast);
+    font-weight: var(--font-weight-regular);
+    font-size: var(--font-size-sm);
+    margin: 0 8px;
+    /* Reduce highlight width so it doesn't touch edge */
+    position: relative;
+}
+
+.navLinkIcon {
+    margin-right: var(--spacing-md);
+    font-size: 1.3rem;
+    /* Slightly larger icons */
+    color: var(--sidebar-icon-color);
+    transition: color var(--transition-fast);
+    line-height: 1;
+    /* Ensure icon aligns well */
+}
+
+.navLinkLabel {
+    flex-grow: 1;
+}
+
+.navLink:hover {
+    background-color: var(--sidebar-hover-background);
+    color: var(--primary-text);
+    /* Darker text on hover */
+}
+
+.navLink:hover .navLinkIcon {
+    color: var(--primary-text);
+}
+
+.navLinkActive {
+    background-color: var(--sidebar-active-background);
+    color: var(--sidebar-active-text-color) !important;
+    /* Ensure override */
+    font-weight: var(--font-weight-medium);
+    box-shadow: 0 2px 8px rgba(246, 88, 103, 0.08);
+}
+
+.navLinkActive .navLinkIcon {
+    color: var(--sidebar-active-icon-color) !important;
+    /* Ensure override */
+}
+
+.navLinkActive .navLinkLabel {
+    color: var(--sidebar-active-text-color) !important;
+    /* Ensure override */
+}
+
+.navLinkActive:hover {
+    background-color: var(--sidebar-active-background);
+    color: var(--sidebar-active-text-color) !important;
+}
+
+.navLinkActive:hover .navLinkIcon {
+    color: var(--sidebar-active-icon-color) !important;
+}

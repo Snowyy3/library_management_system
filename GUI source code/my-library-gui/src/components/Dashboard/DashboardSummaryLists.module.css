@@ -1,0 +1,324 @@
+/* Filepath: x:/Programming/Python/[Y2S2] Year 2, Spring semester/[Y2S2] Database Management Systems/Final project - Group assignment/my-library-gui/src/components/Dashboard/DashboardSummaryLists.module.css */
+
+.summaryCard {
+    padding: var(--spacing-md);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    /* Ensure cards take full width of their container */
+    margin-bottom: var(--spacing-lg);
+    /* Add some bottom margin for standalone cards */
+}
+
+.listTitle {
+    font-size: var(--font-size-h4);
+    font-weight: var(--font-weight-bold);
+    color: var(--primary-text);
+    margin-bottom: var(--spacing-md);
+    padding-bottom: var(--spacing-sm);
+    border-bottom: 1px solid var(--light-gray-lines);
+}
+
+/* Popular Books Table (replaces old list styles) */
+.rankColumn {
+    width: 5%;
+    text-align: center;
+    color: #b0b0b0;
+    font-weight: 700;
+    background: none;
+    font-size: 1.05em;
+    border-right: none;
+}
+
+.idColumn {
+    /* For BookID in Popular Books and ID in Recently Overdue */
+    width: 10%;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.bookIdColumn {
+    min-width: 90px;
+    max-width: 200px;
+    width: 135px;
+    padding-right: 3%;
+    text-align: center;
+    color: var(--primary-text);
+    font-weight: 500;
+    background: none;
+    letter-spacing: 0.5px;
+}
+
+.bookIdCell {
+    font-family: 'Fira Mono', 'Consolas', monospace;
+    font-style: italic;
+    color: var(--primary-text);
+    font-weight: 500;
+    text-align: center;
+    background: none;
+    border-radius: 4px;
+    padding: 2px 8px;
+    font-size: 0.98em;
+    letter-spacing: 0.5px;
+    min-width: 90px;
+    /* Added */
+    max-width: 250px;
+    /* Added */
+    width: 200px;
+    /* Added */
+    padding-right: 4%;
+    /* Added */
+}
+
+.popularBooksTitle {
+    /* Now a td class */
+    font-weight: var(--font-weight-bold);
+    color: var(--primary-text);
+    font-family: var(--font-family-primary);
+}
+
+.popularBooksAuthor {
+    /* Now a td class */
+    font-style: italic;
+    color: var(--secondary-text);
+    font-family: var(--font-family-primary);
+}
+
+.countColumn {
+    width: 10%;
+    text-align: center;
+    font-weight: 600;
+    color: #3578e5;
+    min-width: 80px;
+    max-width: 120px;
+}
+
+/* Summary Table (common styles for Recently Overdue and Popular Books) */
+.tableContainer {
+    overflow-x: auto;
+    flex-grow: 1;
+}
+
+.summaryTable {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: var(--font-size-sm);
+}
+
+.summaryTable th,
+.summaryTable td {
+    padding: 8px 10px;
+    vertical-align: middle;
+    /* Increased padding for better readability in full-width tables */
+    text-align: left;
+    border-bottom: 1px solid var(--light-gray-lines);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 220px;
+    white-space: nowrap;
+    background: none;
+    min-width: 80px;
+}
+
+.summaryTable th {
+    font-weight: var(--font-weight-bold);
+    color: var(--primary-text);
+    background-color: rgba(0, 0, 0, 0.02);
+}
+
+.summaryTable th.countColumn,
+.summaryTable td.countColumn,
+.summaryTable th.overdueDaysCell,
+.summaryTable td.overdueDaysCell {
+    text-align: center;
+}
+
+.summaryTable th.idColumn,
+.summaryTable td.idColumn,
+.summaryTable th.rankColumn,
+.summaryTable td.rankColumn {
+    text-align: center;
+}
+
+.summaryTable th.rankColumn,
+.summaryTable td.rankColumn,
+.summaryTable th.bookIdColumn,
+.summaryTable td.bookIdColumn,
+.summaryTable th.countColumn,
+.summaryTable td.countColumn,
+.summaryTable th.overdueDaysCell,
+.summaryTable td.overdueDaysCell,
+.summaryTable th:last-child,
+.summaryTable td:last-child {
+    text-align: center;
+}
+
+.summaryTable th:last-child {
+    text-align: center !important;
+}
+
+.summaryTable th:nth-child(1),
+.summaryTable td:nth-child(1) {
+    min-width: 95px;
+    max-width: 180px;
+    text-align: left;
+}
+
+.summaryTable th:nth-child(2),
+.summaryTable td:nth-child(2) {
+    min-width: 80px;
+    max-width: 100px;
+}
+
+.summaryTable th:nth-child(3),
+.summaryTable td:nth-child(3) {
+    min-width: 180px;
+    max-width: 260px;
+    font-weight: var(--font-weight-bold);
+    color: var(--primary-text);
+    font-family: var(--font-family-primary);
+}
+
+.summaryTable th:nth-child(4) {
+    min-width: 140px;
+    max-width: 200px;
+    font-style: normal;
+    color: var(--primary-text);
+    font-family: var(--font-family-primary);
+}
+
+.summaryTable td:nth-child(4) {
+    min-width: 140px;
+    max-width: 200px;
+    font-style: italic;
+    color: var(--secondary-text);
+    font-family: var(--font-family-primary);
+}
+
+.summaryTable th:nth-child(5),
+.summaryTable td:nth-child(5) {
+    min-width: 90px;
+    max-width: 120px;
+}
+
+.summaryTable th:nth-child(6),
+.summaryTable td:nth-child(6) {
+    min-width: 100px;
+    max-width: 120px;
+}
+
+.summaryTable td.bookIdColumn,
+.summaryTable td.bookIdCell {
+    /* font-family: 'Fira Mono', 'Consolas', monospace; */
+    font-family: var(--font-family-primary);
+    font-style: italic;
+    color: var(--primary-text);
+    font-weight: 500;
+    text-align: center;
+}
+
+.summaryTable tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.summaryTable tbody tr:hover {
+    background-color: #f9f9f9;
+}
+
+.readerNameCell {
+    font-weight: var(--font-weight-medium);
+}
+
+.authorNameCell {
+    font-style: italic;
+    color: var(--secondary-text);
+}
+
+.overdueDaysCell {
+    color: var(--danger-red);
+    font-weight: var(--font-weight-bold);
+    text-align: center;
+    width: 15%;
+    /* Give it a bit more defined width */
+}
+
+.statusOverdueBadge {
+    background-color: #fdeaea;
+    /* soft red background */
+    color: var(--primary-accent-darker);
+    /* bolder accent text */
+    padding: 0.18em 0.9em;
+    border-radius: var(--border-radius-md);
+    font-size: 0.95em;
+    font-weight: var(--font-weight-bold);
+    text-transform: capitalize;
+    letter-spacing: 0.5px;
+    display: inline-block;
+    box-shadow: none;
+}
+
+.borrowCountBadge {
+    display: inline-block;
+    min-width: 32px;
+    padding: 2px 12px;
+    border-radius: 7px;
+    /* reduced from 12px */
+    background: #eaf1ff;
+    color: #3578e5;
+    font-weight: 600;
+    font-size: 1em;
+    text-align: center;
+    letter-spacing: 0.2px;
+    box-shadow: none;
+    margin-left: 2px;
+}
+
+.overdueStatusBadge {
+    display: inline-block;
+    min-width: 40px;
+    padding: 2px 12px;
+    border-radius: 7px;
+    /* reduced from 12px */
+    background: #ffeaea;
+    color: #d13a3a;
+    font-weight: 600;
+    font-size: 1em;
+    text-align: center;
+    letter-spacing: 0.2px;
+    box-shadow: none;
+}
+
+.noDataMessage,
+.noDataMessageTable {
+    color: var(--secondary-text);
+    padding: var(--spacing-md) 0;
+    text-align: center;
+    font-style: italic;
+}
+
+.noDataMessageTable {
+    padding: var(--spacing-lg) var(--spacing-md);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+
+    .summaryTable th,
+    .summaryTable td {
+        white-space: normal;
+        /* Allow text wrapping on smaller screens */
+        padding: var(--spacing-xs);
+        /* Reduce padding on smaller screens */
+    }
+}
+
+@media (max-width: 700px) {
+
+    .bookIdColumn,
+    .rankColumn {
+        width: 12vw;
+        font-size: 0.95em;
+        padding-left: 2px;
+        padding-right: 2px;
+    }
+}

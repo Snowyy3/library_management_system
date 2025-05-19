@@ -1,0 +1,362 @@
+/* filepath: x:/Programming/Python/[Y2S2] Year 2, Spring semester/[Y2S2] Database Management Systems/Final project - Group assignment/my-library-gui/src/styles/global.css */
+/* Import CSS variables */
+@import './variables.css';
+
+/* Box Sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Basic Reset */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Set core root defaults */
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+    font-family: var(--font-family-primary);
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--line-height-base);
+    color: var(--primary-text);
+    background-color: var(--page-background);
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    display: flex;
+    /* Changed from place-items: center; to allow full width/height for layout */
+    flex-direction: column;
+    /* Ensure body can grow if content is small */
+}
+
+/* Remove default list styles */
+ul,
+ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg,
+video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    /* Remove bottom space under images */
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Basic link styling */
+a {
+    color: var(--primary-accent);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+a:hover,
+a:focus {
+    color: var(--primary-accent-darker);
+    /* text-decoration: underline; */
+}
+
+/* Headings */
+h1,
+.h1 {
+    font-size: var(--font-size-h1);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-heading);
+    margin-bottom: var(--spacing-md);
+}
+
+h2,
+.h2 {
+    font-size: var(--font-size-h2);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-heading);
+    margin-bottom: var(--spacing-md);
+}
+
+h3,
+.h3 {
+    font-size: var(--font-size-h3);
+    font-weight: var(--font-weight-bold);
+    /* UI Philosophy L4 is Bold or Medium, choosing Bold for more emphasis */
+    line-height: var(--line-height-heading);
+    margin-bottom: var(--spacing-sm);
+}
+
+h4,
+.h4 {
+    font-size: var(--font-size-h4);
+    font-weight: var(--font-weight-medium);
+    line-height: var(--line-height-heading);
+    margin-bottom: var(--spacing-sm);
+}
+
+h5,
+.h5 {
+    font-size: var(--font-size-h5);
+    font-weight: var(--font-weight-medium);
+    line-height: var(--line-height-heading);
+    margin-bottom: var(--spacing-xs);
+}
+
+h6,
+.h6 {
+    font-size: var(--font-size-h6);
+    font-weight: var(--font-weight-medium);
+    line-height: var(--line-height-heading);
+    margin-bottom: var(--spacing-xs);
+}
+
+/* Paragraphs */
+p {
+    margin-bottom: var(--spacing-md);
+}
+
+/* Utility Classes (can be expanded) */
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.font-bold {
+    font-weight: var(--font-weight-bold);
+}
+
+.font-medium {
+    font-weight: var(--font-weight-medium);
+}
+
+.font-regular {
+    font-weight: var(--font-weight-regular);
+}
+
+.text-primary {
+    color: var(--primary-text);
+}
+
+.text-secondary {
+    color: var(--secondary-text);
+}
+
+.text-accent {
+    color: var(--primary-accent);
+}
+
+.text-danger {
+    color: var(--danger-red);
+}
+
+/* Remove default margin for the root div if it's direct child of body */
+body>#root {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    /* Reset margin if #root is direct child */
+    padding: 0;
+    /* Reset padding if #root is direct child */
+}
+
+/* Basic Card Styling (can be a component style or global) */
+.card-base {
+    background-color: var(--card-background);
+    border-radius: var(--border-radius-xl);
+    box-shadow: var(--card-box-shadow);
+    padding: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
+}
+
+/* Basic Button Styling (can be component style or global) */
+.button-base {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--button-padding-y) var(--button-padding-x);
+    font-family: var(--font-family-primary);
+    font-size: var(--font-size-sm);
+    /* L4 in philosophy for button text */
+    font-weight: var(--button-font-weight);
+    border-radius: var(--border-radius-md);
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid transparent;
+    transition: background-color var(--transition-std), border-color var(--transition-std), color var(--transition-std);
+    white-space: nowrap;
+    /* Prevent text wrapping */
+}
+
+.button-primary {
+    background-color: var(--primary-accent);
+    color: var(--white);
+    border-color: var(--primary-accent);
+}
+
+.button-primary:hover,
+.button-primary:focus {
+    background-color: var(--primary-accent-darker);
+    border-color: var(--primary-accent-darker);
+    color: var(--white);
+    text-decoration: none;
+}
+
+.button-secondary {
+    background-color: transparent;
+    color: var(--primary-accent);
+    border-color: var(--primary-accent);
+}
+
+.button-secondary:hover,
+.button-secondary:focus {
+    background-color: rgba(var(--primary-accent-rgb), 0.1);
+    /* Light accent fill */
+    border-color: var(--primary-accent-darker);
+    color: var(--primary-accent-darker);
+    text-decoration: none;
+}
+
+.button-danger {
+    background-color: var(--danger-red);
+    color: var(--white);
+    border-color: var(--danger-red);
+}
+
+.button-danger:hover,
+.button-danger:focus {
+    background-color: darken(var(--danger-red), 10%);
+    /* Needs a SASS like function or a pre-calculated darker red */
+    border-color: darken(var(--danger-red), 12%);
+    color: var(--white);
+    text-decoration: none;
+}
+
+/* Fallback for button-danger hover if darken() is not available in pure CSS */
+/* You would define --danger-red-darker in variables.css */
+/* .button-danger:hover, .button-danger:focus {
+  background-color: var(--danger-red-darker);
+  border-color: var(--danger-red-darker);
+} */
+
+/* Input Field Styling (basic global, can be enhanced in components) */
+.input-base {
+    display: block;
+    width: 100%;
+    padding: var(--input-padding-y) var(--input-padding-x);
+    font-family: var(--font-family-primary);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--line-height-base);
+    color: var(--input-text-color);
+    background-color: var(--input-background);
+    background-clip: padding-box;
+    border: 1px solid var(--input-border-color);
+    border-radius: var(--border-radius-md);
+    transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.input-base:focus {
+    border-color: var(--input-focus-border-color);
+    outline: 0;
+    box-shadow: var(--input-box-shadow-focus);
+}
+
+.input-base::placeholder {
+    color: var(--secondary-text);
+    opacity: 0.7;
+}
+
+/* Table Styling (basic global) */
+.table-base {
+    width: 100%;
+    margin-bottom: var(--spacing-md);
+    color: var(--primary-text);
+    border-collapse: collapse;
+    /* Ensures borders are clean */
+}
+
+.table-base th,
+.table-base td {
+    padding: var(--spacing-sm) var(--spacing-md);
+    text-align: left;
+    vertical-align: top;
+    border-top: 1px solid var(--light-gray-lines);
+}
+
+.table-base thead th {
+    vertical-align: bottom;
+    border-bottom: 2px solid var(--light-gray-lines);
+    /* Heavier border for header bottom */
+    font-weight: var(--font-weight-medium);
+    color: var(--primary-text);
+    background-color: rgba(0, 0, 0, 0.02);
+    /* Very subtle header background */
+}
+
+.table-base tbody+tbody {
+    border-top: 2px solid var(--light-gray-lines);
+}
+
+/* Striped rows for tables - optional, can be added with a class like .table-striped */
+/*
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: rgba(0,0,0,.03);
+}
+*/
+
+/* Material Symbols default styling */
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 370,
+        'GRAD' 0,
+        'opsz' 24;
+    /* font-size: inherit; */
+    font-size: 24px;
+    /* Inherit size from parent, can be overridden */
+    vertical-align: middle;
+    /* Align icons nicely with text */
+}

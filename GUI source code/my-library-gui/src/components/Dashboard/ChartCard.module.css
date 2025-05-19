@@ -1,0 +1,40 @@
+/* filepath: x:/Programming/Python/[Y2S2] Year 2, Spring semester/[Y2S2] Database Management Systems/Final project - Group assignment/my-library-gui/src/components/Dashboard/ChartCard.module.css */
+.chartCardContainer {
+    background-color: var(--card-background);
+    border-radius: var(--border-radius-xl);
+    box-shadow: var(--card-box-shadow);
+    padding: var(--spacing-lg);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.chartsRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    gap: var(--spacing-xl);
+}
+
+.chartWrapper {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+}
+
+.chartTitle {
+    margin: 0 0 var(--spacing-sm) 0;
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    color: var(--text-primary);
+    text-align: center;
+    font-family: var(--font-family-primary);
+}

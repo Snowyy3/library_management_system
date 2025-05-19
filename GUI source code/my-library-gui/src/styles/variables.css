@@ -1,0 +1,184 @@
+/* filepath: x:/Programming/Python/[Y2S2] Year 2, Spring semester/[Y2S2] Database Management Systems/Final project - Group assignment/my-library-gui/src/styles/variables.css */
+:root {
+  /* Color Palette - Light Mode */
+  --page-background: #F9F9F9;
+  --card-background: #FFFFFF;
+  --primary-text: #212529;
+  --secondary-text: #6C757D;
+  --primary-accent: #F65867;
+  --primary-accent-darker: #E04F5D;
+  /* For hover states */
+  --white: #FFFFFF;
+  --light-gray-border: #DEE2E6;
+  --light-gray-lines: #E0E0E0;
+  --disabled-text: #BDBDBD;
+  --disabled-background: #EEEEEE;
+  --danger-red: #DC3545;
+
+  /* Typography */
+  --font-family-primary: 'Roboto', sans-serif;
+
+  /* Font Weights (matching Roboto import) */
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+  --font-weight-black: 900;
+
+  /* Font Sizes */
+  --font-size-base: 16px;
+  /* Default for body text */
+  --font-size-sm: 14px;
+  /* Smaller text, like helper text or captions */
+  --font-size-md: 16px;
+  /* Medium, often same as base */
+  --font-size-lg: 18px;
+  /* Large text, subheadings */
+  --font-size-xl: 20px;
+  /* Extra large, secondary headings */
+
+  /* Typographic Hierarchy (from UI Design Philosophy) */
+  /* L1 - Large Display Titles (Roboto Black, large size) - Use case: Special banners, not typical page titles */
+  /* For L1, specific components might apply this directly. Example: --font-size-display: 3rem; */
+
+  /* L2 - Page Titles (e.g., "Dashboard", "Manage Books") - Roboto Bold */
+  --font-size-h1: 2rem;
+  /* Approx 32px */
+
+  /* L3 - Card Titles, Major Section Headings - Roboto Bold */
+  --font-size-h2: 1.75rem;
+  /* Approx 28px */
+
+  /* L4 - Sub-Section Headings, Important Labels - Roboto Medium or Bold */
+  --font-size-h3: 1.25rem;
+  /* Approx 20px */
+
+  /* L5 - Lesser Headings, Group Labels - Roboto Medium */
+  --font-size-h4: 1.125rem;
+  /* Approx 18px */
+
+  /* L6 - Smallest headings, often similar to bold body text - Roboto Medium */
+  --font-size-h5: 1rem;
+  /* Approx 16px */
+  --font-size-h6: 0.875rem;
+  /* Approx 14px */
+
+  /* Line Heights */
+  --line-height-base: 1.6;
+  --line-height-heading: 1.3;
+
+  /* Spacing */
+  --spacing-xxs: 0.125rem;
+  /* 2px */
+  --spacing-xs: 0.25rem;
+  /* 4px */
+  --spacing-sm: 0.5rem;
+  /* 8px */
+  --spacing-md: 1rem;
+  /* 16px */
+  --spacing-lg: 1.5rem;
+  /* 24px */
+  --spacing-xl: 2rem;
+  /* 32px */
+  --spacing-xxl: 3rem;
+  /* 48px */
+
+  /* Borders */
+  --border-radius-sm: 4px;
+  --border-radius-md: 6px;
+  /* For inputs, buttons */
+  --border-radius-lg: 8px;
+  --border-radius-xl: 12px;
+  /* For cards */
+
+  /* Box Shadows */
+  --box-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --box-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --box-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --card-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  /* As per UI philosophy */
+
+  /* Transitions */
+  --transition-fast: 0.15s ease-in-out;
+  --transition-std: 0.25s ease-in-out;
+
+  /* Z-index */
+  --z-index-sidebar: 1000;
+  --z-index-topnavbar: 1000;
+  --z-index-dropdown: 1020;
+  --z-index-modal: 1100;
+  --z-index-toast: 1200;
+
+  /* Sidebar */
+  --sidebar-width: 260px;
+  --sidebar-background: var(--card-background);
+  --sidebar-text-color: var(--secondary-text);
+  --sidebar-icon-color: var(--icon-color-standalone);
+  /* Updated from var(--secondary-text) */
+  --sidebar-active-background: var(--primary-accent);
+  --sidebar-active-text-color: var(--white);
+  --sidebar-active-icon-color: var(--white);
+  --sidebar-hover-background: #f0f0f0;
+  --sidebar-box-shadow: 2px 0 5px rgba(0, 0, 0, 0.05);
+
+  /* Top Navbar */
+  --topnavbar-height: 70px;
+  /* Increased slightly for better spacing */
+  --topnavbar-background: var(--card-background);
+  --topnavbar-text-color: var(--primary-text);
+  --topnavbar-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+
+  /* Input Fields */
+  --input-padding-y: 0.5rem;
+  --input-padding-x: 0.75rem;
+  --input-border-color: var(--light-gray-border);
+  --input-background: var(--white);
+  --input-text-color: var(--primary-text);
+  --input-focus-border-color: var(--primary-accent);
+  --input-box-shadow-focus: 0 0 0 0.2rem rgba(var(--primary-accent-rgb), 0.25);
+  /* Needs --primary-accent-rgb */
+
+  /* Buttons */
+  --button-padding-y: 0.6em;
+  --button-padding-x: 1.2em;
+  --button-font-weight: var(--font-weight-medium);
+
+  /* Helper for box-shadow focus on inputs if primary-accent is hex */
+  /* If --primary-accent is #F65867, then R=246, G=88, B=103 */
+  --primary-accent-rgb: 246, 88, 103;
+
+  /* Icon Colors */
+  --icon-color-standalone: #555555;
+  /* As per UI Philosophy Sec 3 example for standalone/outline icons */
+  --icon-color-on-accent: var(--white);
+  /* For icons on accent backgrounds */
+
+  /* StatCard Specific Icon Vars */
+  --stat-card-icon-default-bg: #E9ECEF;
+  /* Light grey for default icon wrapper background */
+  --stat-card-icon-default-color: var(--secondary-text);
+  /* Default icon color */
+  --stat-card-icon-accent-bg: rgba(var(--primary-accent-rgb), 0.1);
+  /* Light primary accent for icon wrapper background */
+  --stat-card-icon-accent-color: var(--primary-accent);
+  /* Primary accent for icon color when on accent background */
+}
+
+/* Dark Mode (Placeholder - to be detailed if implemented) */
+/*
+@media (prefers-color-scheme: dark) {
+  :root {
+    --page-background: #121212;
+    --card-background: #1E1E1E;
+    --primary-text: #E0E0E0;
+    --secondary-text: #A0A0A0;
+    // --primary-accent: #F65867; // May need adjustment for contrast
+    --light-gray-border: #444444;
+    --light-gray-lines: #333333;
+
+    --sidebar-background: var(--card-background);
+    --sidebar-hover-background: #2a2a2a; 
+    --topnavbar-background: var(--card-background);
+
+  }
+}
+*/

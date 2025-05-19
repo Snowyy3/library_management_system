@@ -1,0 +1,49 @@
+/* Filepath: x:/Programming/Python/[Y2S2] Year 2, Spring semester/[Y2S2] Database Management Systems/Final project - Group assignment/my-library-gui/src/layouts/SidebarLayout.module.css */
+.appContainer {
+    display: flex;
+    min-height: 100vh;
+    background-color: var(--page-background);
+}
+
+.sidebarWrapper {
+    width: var(--sidebar-width);
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    background-color: var(--sidebar-background);
+    box-shadow: var(--sidebar-box-shadow);
+    z-index: var(--z-index-sidebar);
+    overflow-y: auto;
+    /* In case sidebar content is too long */
+    transition: width 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    border-top-right-radius: 0;
+}
+
+.sidebarCollapsed {
+    width: 80px;
+    min-width: 80px;
+    border-top-right-radius: 0;
+}
+
+.mainContentWrapper {
+    margin-left: var(--sidebar-width);
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    /* Prevents content from overflowing flex container */
+    transition: margin-left 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.sidebarCollapsed~.mainContentWrapper {
+    margin-left: 80px;
+}
+
+.pageContent {
+    flex-grow: 1;
+    padding: var(--spacing-lg);
+    overflow-y: auto;
+    /* Allows content area to scroll independently */
+    background-color: var(--page-background);
+}

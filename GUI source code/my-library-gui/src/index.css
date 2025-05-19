@@ -1,0 +1,26 @@
+/* Import global styles and variables first */
+@import './styles/variables.css';
+@import './styles/global.css';
+
+/* 
+  Any remaining styles in index.css are typically very minimal, 
+  often just application-wide root settings if not covered by global.css.
+  The original Vite template styles can be largely removed or refactored 
+  into global.css or component-specific styles.
+*/
+
+/* Keep specific root settings if necessary, otherwise global.css handles body and html */
+:root {
+  /* font-family from global.css will take precedence for body */
+  /* line-height from global.css */
+  /* font-weight from global.css */
+
+  /* color-scheme can be useful for browser UI theming (scrollbars, etc.) */
+  color-scheme: light;
+  /* Explicitly light, dark can be added via JS toggle */
+
+  /* font-synthesis from global.css */
+  /* text-rendering from global.css */
+  /* -webkit-font-smoothing from global.css */
+  /* -moz-osx-font-smoothing from global.css */
+}

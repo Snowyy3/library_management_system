@@ -1,0 +1,69 @@
+/* Filepath: x:/Programming/Python/[Y2S2] Year 2, Spring semester/[Y2S2] Database Management Systems/Final project - Group assignment/my-library-gui/src/components/Dashboard/DashboardStats.module.css */
+.dashboardStatsContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto auto;
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
+}
+
+/* Remove flex from these, keep for legacy but not used for layout */
+.statsRow,
+.statsRowComplex {
+    display: contents;
+}
+
+.statsRow:last-child {
+    margin-bottom: 0;
+    /* No margin for the last row in this container */
+}
+
+.stackedStatsColumn {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    min-width: 0;
+    margin-right: 0;
+}
+
+.stackedCard {
+    height: calc(50% - var(--spacing-md));
+    /* (24px gap / 2) = 12px = var(--spacing-md) */
+    /* Ensures cards in the stack share height equally, accounting for the gap */
+}
+
+.chartContainer {
+    grid-column: 2 / 5;
+    grid-row: 2 / 3;
+    display: flex;
+    align-items: stretch;
+    min-width: 0;
+    width: 100%;
+    overflow: hidden;
+    /* Prevent any overflow from charts */
+    padding: 0;
+    /* Remove padding - the ChartCard will handle internal padding */
+}
+
+/* Ensure ChartCard component inside chartContainer takes full width and height */
+.chartContainer>div {
+    width: 100%;
+    height: 100%;
+}
+
+.loadingStats {
+    padding: var(--spacing-lg) 0;
+    font-family: var(--font-family-primary);
+    font-size: var(--font-size-md);
+    color: var(--secondary-text);
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+/* Custom style for stacked stat labels */
+.stackedStatLabel {
+    display: block;
+    padding-top: 6%;
+}

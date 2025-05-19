@@ -1,0 +1,303 @@
+/* Filepath: x:/Programming/Python/[Y2S2] Year 2, Spring semester/[Y2S2] Database Management Systems/Final project - Group assignment/my-library-gui/src/components/common/TopNavbar.module.css */
+.topNavbar {
+    height: var(--topnavbar-height);
+    background-color: var(--topnavbar-background);
+    box-shadow: var(--topnavbar-box-shadow);
+    display: flex;
+    align-items: center;
+    padding: 0 var(--spacing-lg);
+    color: var(--topnavbar-text-color);
+    position: sticky;
+    /* Make TopNavbar sticky */
+    top: 0;
+    z-index: var(--z-index-topnavbar);
+    border-bottom-left-radius: 7px;
+}
+
+.logoPlaceholder {
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-lg);
+    color: var(--primary-accent);
+}
+
+.navControls {
+    margin-left: auto;
+    /* Pushes controls to the right */
+    display: flex;
+    align-items: center;
+}
+
+.controlItem {
+    margin-left: var(--spacing-md);
+    color: var(--secondary-text);
+    cursor: pointer;
+}
+
+.controlItem .material-symbols-outlined {
+    font-size: var(--font-size-xl);
+    vertical-align: middle;
+}
+
+.leftSection {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-lg);
+}
+
+.hamburgerButton {
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: var(--spacing-xs);
+    border-radius: var(--border-radius-md);
+    display: flex;
+    align-items: center;
+    transition: background 0.15s;
+}
+
+.hamburgerButton:focus,
+.hamburgerButton:hover {
+    background: var(--sidebar-hover-bg, #f5f5f5);
+}
+
+.hamburgerButton .material-symbols-outlined {
+    font-size: 2rem;
+    color: var(--primary-accent);
+}
+
+.pageLabel {
+    font-weight: var(--font-weight-black);
+    font-size: 1.3rem;
+    letter-spacing: 0.02em;
+    margin-left: var(--spacing-xs);
+}
+
+.userInfoBlock {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    padding: 0 0 0 1.2rem;
+    min-width: 180px;
+    cursor: pointer;
+    background: none;
+    border-radius: 0;
+    box-shadow: none;
+    position: relative;
+}
+
+.userTextBlock {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    margin-right: 0.2rem;
+    min-width: 90px;
+}
+
+.userName {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 1.15rem;
+    color: var(--primary-text, #262221);
+    line-height: 1.1;
+    text-align: right;
+    letter-spacing: 0.01em;
+}
+
+.userRole {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 0.9rem;
+    color: var(--secondary-text, #A2A2A1);
+    margin-top: 4px;
+    line-height: 1.1;
+    text-align: right;
+    letter-spacing: 0.01em;
+}
+
+.userAvatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+/* Dropdown styles */
+.userDropdownMenu {
+    position: absolute;
+    top: 110%;
+    right: 0;
+    min-width: 160px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.10);
+    padding: 0.5rem 0;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    animation: fadeIn 0.15s;
+}
+
+.userDropdownItem {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    color: var(--primary-text, #262221);
+    padding: 0.7rem 1.2rem;
+    background: none;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    transition: background 0.12s;
+}
+
+.userDropdownItem:hover {
+    background: #f5f5f5;
+}
+
+.userDropdownItemRename {
+    /* Subtle accent on hover */
+    transition: color 0.15s, background 0.12s;
+}
+
+.userDropdownItemRename:hover {
+    color: var(--primary-accent);
+    background: #fbeaec;
+}
+
+.userDropdownItemDelete {
+    /* Warning color for delete */
+    transition: color 0.15s, background 0.12s;
+}
+
+.userDropdownItemDelete,
+.userDropdownItemDelete .material-symbols-outlined {
+    color: var(--danger-red) !important;
+}
+
+.userDropdownItemDelete:hover {
+    background: #ffeaea;
+    color: var(--danger-red) !important;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.18);
+    z-index: var(--z-index-modal);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modalDialog {
+    background: var(--card-background);
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.12);
+    padding: 32px 28px 24px 28px;
+    min-width: 320px;
+    max-width: 95vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.modalDialog input[type="text"],
+.modalDialog input[type="password"] {
+    width: 100%;
+    font-family: var(--font-family-primary);
+    font-size: 1rem;
+    border: 1.5px solid var(--light-gray-border);
+    border-radius: 8px;
+    padding: 12px 14px;
+    background: var(--card-background);
+    outline: none;
+    margin-bottom: 0px;
+    margin-top: 6px;
+    transition: border 0.18s;
+    box-sizing: border-box;
+}
+
+.modalDialog input[type="text"]:focus,
+.modalDialog input[type="password"]:focus {
+    border-color: var(--primary-accent);
+    border-width: 2px;
+    background: var(--card-background);
+}
+
+.modalTitle {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--primary-text);
+    margin-bottom: 18px;
+    text-align: center;
+}
+
+.modalActions {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 18px;
+    margin-top: 18px;
+    width: 100%;
+}
+
+.cancelBtn {
+    background-color: var(--light-gray-border);
+    color: var(--primary-text);
+    border: 1px solid var(--light-gray-lines);
+    border-radius: 6px;
+    padding: 10px 15px;
+    font-size: 0.98rem;
+    cursor: pointer;
+    transition: background 0.15s;
+    flex: 1 1 0;
+    max-width: 48%;
+}
+
+.cancelBtn:hover {
+    background-color: var(--light-gray-lines);
+}
+
+.confirmBtn {
+    background-color: var(--primary-accent);
+    color: var(--white);
+    border: none;
+    border-radius: 6px;
+    padding: 10px 15px;
+    font-size: 0.98rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.15s;
+    flex: 1 1 0;
+    max-width: 48%;
+}
+
+.confirmBtn:hover {
+    background-color: var(--primary-accent-darker);
+}
+
+.confirmBtn:disabled {
+    background-color: var(--disabled-gray);
+    color: var(--disabled-text);
+    cursor: not-allowed;
+}

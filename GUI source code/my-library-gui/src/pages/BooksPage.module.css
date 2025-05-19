@@ -1,0 +1,278 @@
+/* Book list page styles for card, search bar, table, and controls */
+.booksPageCard {
+    background: var(--card-background);
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    padding: 28px 28px 32px 28px;
+    margin: 0 auto;
+    max-width: 1320px;
+    margin-bottom: 40px;
+}
+
+.booksHeaderRow {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 24px;
+    width: 100%;
+}
+
+.booksSearchBar {
+    flex: 1 1 38%;
+    min-width: 320px;
+    max-width: 520px;
+    background: var(--card-background);
+    border: 1.5px solid var(--light-gray-border);
+    border-radius: 999px;
+    padding: 10px 22px;
+    font-size: var(--font-size-md);
+    color: var(--primary-text);
+    font-family: var(--font-family-primary);
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.booksSearchBar:focus {
+    border-color: var(--primary-accent);
+}
+
+.booksAddBtn {
+    background: var(--primary-accent);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-weight: var(--font-weight-medium);
+    font-size: var(--font-size-md);
+    padding: 10px 22px;
+    cursor: pointer;
+    transition: background 0.18s;
+    box-shadow: 0 1px 2px rgba(246, 88, 103, 0.04);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.booksAddBtn:hover {
+    background: var(--primary-accent-darker);
+}
+
+.booksHeaderSpacer {
+    flex: 1 1 auto;
+}
+
+.booksResultsPerPage {
+    margin-left: 18px;
+    font-size: var(--font-size-md);
+    color: var(--secondary-text);
+    font-family: var(--font-family-primary);
+    border: 1.5px solid var(--light-gray-border);
+    border-radius: 8px;
+    padding: 7px 16px;
+    background: #fff;
+    outline: none;
+    transition: border-color 0.2s;
+    min-width: 110px;
+    margin-right: 4px;
+}
+
+.booksResultsPerPage:focus {
+    border-color: var(--primary-accent);
+}
+
+.booksTableWrapper {
+    margin-top: 10px;
+    overflow-x: auto;
+}
+
+.booksTable {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 0;
+    font-family: var(--font-family-primary);
+    background: transparent;
+    table-layout: auto;
+}
+
+.booksTable th,
+.booksTable td {
+    padding-left: 22px;
+    padding-right: 22px;
+}
+
+.booksTable th {
+    text-align: center;
+    font-weight: var(--font-weight-medium);
+    font-size: var(--font-size-md);
+    color: var(--primary-text);
+    background: #f9f9f9;
+    border-bottom: 2px solid var(--light-gray-lines);
+    padding: 12px 22px;
+}
+
+.booksTable th.booksIdCol {
+    color: var(--primary-text);
+    font-weight: 500;
+    font-family: var(--font-family-primary);
+    font-size: 15px;
+}
+
+.booksTable td {
+    font-size: var(--font-size-md);
+    color: var(--primary-text);
+    padding: 10px 10px;
+    border-bottom: 1px solid var(--light-gray-lines);
+}
+
+.booksTable td.booksIdCol {
+    color: var(--primary-text);
+    font-weight: 500;
+    font-family: var(--font-family-primary);
+    font-size: 15px;
+    font-style: italic;
+    text-align: center;
+}
+
+.booksTable td.booksTitleCol {
+    font-weight: var(--font-weight-bold);
+    color: var(--primary-text);
+}
+
+.booksTable td.booksAuthorCol {
+    font-style: italic;
+    color: #555;
+}
+
+.booksTable td.booksCategoryCol {
+    color: var(--primary-text);
+    font-weight: 400;
+    font-family: var(--font-family-primary);
+    text-align: center;
+}
+
+.booksTable td.booksYearCol {
+    color: #A2A2A1;
+    text-align: center;
+}
+
+.booksTable td.booksQtyCol {
+    color: #262221;
+    /* font-weight: var(--font-weight-bold); */
+    font-weight: 450;
+    text-align: center;
+}
+
+.booksTable td:last-child {
+    text-align: center;
+    padding-left: 3px;
+    padding-right: 0;
+}
+
+.booksTable tr:last-child td {
+    border-bottom: none;
+}
+
+.booksActionBtn {
+    border: none;
+    border-radius: 5px;
+    padding: 8px 18px;
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    margin-right: 8px;
+    cursor: pointer;
+    transition: background 0.18s, color 0.18s;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.booksEditBtn {
+    background: #fbeee6;
+    color: #e07a3f;
+    border: none;
+    border-radius: 7px;
+    box-shadow: none;
+    min-width: 90px;
+    font-size: var(--font-size-md);
+    font-weight: var(--font-weight-medium);
+    /* padding: 10px 0; */
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 0 8px 0 0;
+    transition: background 0.18s, color 0.18s;
+}
+
+.booksEditBtn:hover {
+    background: #f7e0d0;
+    color: #c96a2e;
+}
+
+.booksDeleteBtn {
+    background: #f9e6e6;
+    color: #d04a4a;
+    border: none;
+    border-radius: 7px;
+    box-shadow: none;
+    min-width: 90px;
+    font-size: var(--font-size-md);
+    font-weight: var(--font-weight-medium);
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 0 8px 0 0;
+    transition: background 0.18s, color 0.18s;
+}
+
+.booksDeleteBtn:hover {
+    background: #f3d2d2;
+    color: #b13a3a;
+}
+
+.booksNoResults {
+    color: var(--secondary-text);
+    font-size: var(--font-size-md);
+    text-align: center;
+    margin: 32px 0 0 0;
+}
+
+.booksForm {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin-top: 8px;
+}
+
+.booksFormRow {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.booksFormInput {
+    border: 1.5px solid var(--light-gray-border);
+    border-radius: 7px;
+    padding: 10px 16px;
+    font-size: var(--font-size-md);
+    font-family: var(--font-family-primary);
+    color: var(--primary-text);
+    background: var(--card-background);
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.booksFormInput:focus {
+    border-color: var(--primary-accent);
+}
+
+:global(.modalContent) form {
+    padding-top: 18px;
+    padding-bottom: 18px;
+}
+
+:global(.modalContent) {
+    padding-top: 48px !important;
+    padding-bottom: 48px !important;
+    min-width: 400px;
+}

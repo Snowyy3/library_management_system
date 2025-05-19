@@ -1,0 +1,85 @@
+/* Filepath: x:/Programming/Python/[Y2S2] Year 2, Spring semester/[Y2S2] Database Management Systems/Final project - Group assignment/my-library-gui/src/pages/DashboardPage.module.css */
+.dashboardPage {
+    padding: var(--spacing-md);
+    /* Add some default padding for the page content area */
+}
+
+.pageTitle {
+    font-family: var(--font-family-primary);
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-h2);
+    /* L2 heading - UI Philosophy: 22-26px, var(--font-size-h2) is ~28px */
+    color: var(--primary-text);
+    margin-bottom: var(--spacing-lg);
+    /* 24px */
+}
+
+.dashboardSection {
+    /* Ensure var(--spacing-xxl) is defined in variables.css, e.g., 48px or 3rem */
+    margin-bottom: 88px;
+    /* Default spacing for sections like Stats */
+}
+
+.popularBooksSection {
+    margin-top: var(--spacing-xl);
+    /* Increased top spacing for popular books section */
+    margin-bottom: 88px;
+    /* Increased bottom spacing for popular books section */
+}
+
+.borrowingInfoSection {
+    margin-top: var(--spacing-xl);
+    /* Increased top spacing for borrowing info section */
+    margin-bottom: var(--spacing-xl);
+    /* Increased bottom spacing for borrowing info section */
+}
+
+.chartCardContainer {
+    padding: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+    /* Space between chart and overdue list */
+    /* Utilizes card-base from global.css for background, border-radius, box-shadow */
+}
+
+.sectionTitle {
+    /* For titles like "Borrowing Trends" */
+    font-size: var(--font-size-h4);
+    font-weight: var(--font-weight-bold);
+    color: var(--primary-text);
+    margin-bottom: var(--spacing-md);
+    padding-bottom: var(--spacing-sm);
+    border-bottom: 1px solid var(--light-gray-lines);
+}
+
+.loadingMessage {
+    font-family: var(--font-family-primary);
+    font-size: var(--font-size-md);
+    color: var(--secondary-text);
+    padding: var(--spacing-xl) 0;
+    text-align: center;
+}
+
+.dashboardGreeting {
+    font-family: var(--font-family-primary);
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-text);
+    margin-bottom: 0.2em;
+    letter-spacing: -1px;
+}
+
+.dashboardGreeting .highlight {
+    color: #F75C5C;
+    font-weight: 800;
+}
+
+.dashboardDateTime {
+    font-family: var(--font-family-primary);
+    font-size: 1.25rem;
+    color: var(--primary-text);
+    font-weight: 500;
+    margin-bottom: 38px;
+}
+
+/* Styles for DashboardSummaryLists and its children will be in DashboardSummaryLists.module.css */
+/* Styles for DashboardStats and StatCard will be in their respective .module.css files */

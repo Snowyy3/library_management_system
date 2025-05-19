@@ -1,0 +1,287 @@
+/* CategoriesPage.module.css - Styling for Categories management page, adapted from AuthorsPage styles */
+
+.categoriesPageCard {
+    background: var(--card-background);
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    padding: 28px 28px 32px 28px;
+    margin: 0 auto;
+    max-width: 900px;
+    margin-bottom: 40px;
+}
+
+.categoriesHeaderRow {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 24px;
+    width: 100%;
+}
+
+.categoriesHeaderSpacer {
+    flex: 1 1 auto;
+}
+
+.categoriesSearchBar {
+    flex: 1 1 38%;
+    min-width: 260px;
+    max-width: 420px;
+    background: var(--card-background);
+    border: 1.5px solid var(--light-gray-border);
+    border-radius: 999px;
+    padding: 10px 22px;
+    font-size: var(--font-size-md);
+    color: var(--primary-text);
+    font-family: var(--font-family-primary);
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.categoriesSearchBar:focus {
+    border-color: var(--primary-accent);
+}
+
+.categoriesAddBtn {
+    background: var(--primary-accent);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-weight: var(--font-weight-medium);
+    font-size: var(--font-size-md);
+    padding: 10px 22px;
+    cursor: pointer;
+    transition: background 0.18s;
+    box-shadow: 0 1px 2px rgba(246, 88, 103, 0.04);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.categoriesAddBtn:hover {
+    background: var(--primary-accent-darker);
+}
+
+.categoriesResultsPerPage {
+    margin-left: 18px;
+    font-size: var(--font-size-md);
+    color: var(--secondary-text);
+    font-family: var(--font-family-primary);
+    border: 1.5px solid var(--light-gray-border);
+    border-radius: 8px;
+    padding: 7px 16px;
+    background: #fff;
+    outline: none;
+    transition: border-color 0.2s;
+    min-width: 140px;
+    margin-right: 4px;
+}
+
+.categoriesResultsPerPage:focus {
+    border-color: var(--primary-accent);
+}
+
+.categoriesTableWrapper {
+    margin-top: 40px;
+    overflow-x: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.categoriesTable {
+    width: auto;
+    min-width: 650px;
+    max-width: 100%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    table-layout: auto;
+}
+
+.categoriesTable th,
+.categoriesTable td {
+    padding-left: 28px;
+    padding-right: 28px;
+}
+
+.categoriesTable th {
+    text-align: left;
+    font-weight: var(--font-weight-medium);
+    font-size: var(--font-size-md);
+    color: var(--primary-text);
+    background: #f9f9f9;
+    border-bottom: 2px solid var(--light-gray-lines);
+    padding: 12px 28px;
+}
+
+.categoriesTable th.categoriesIdCol {
+    color: var(--primary-text);
+    font-weight: 500;
+    font-family: var(--font-family-primary);
+    font-size: 15px;
+    text-align: center;
+}
+
+.categoriesTable td {
+    font-size: var(--font-size-md);
+    color: var(--primary-text);
+    padding: 10px 10px;
+    border-bottom: 1px solid var(--light-gray-lines);
+}
+
+.categoriesTable td.categoriesIdCol {
+    color: var(--primary-text);
+    font-weight: 500;
+    font-family: var(--font-family-primary);
+    font-size: 15px;
+    font-style: italic;
+    text-align: center;
+}
+
+.categoriesTable td.categoriesNameCol {
+    font-weight: var(--font-weight-bold);
+    color: var(--primary-text);
+}
+
+.categoriesTable td {
+    min-width: 120px;
+}
+
+.categoriesTable td:last-child {
+    min-width: 200px;
+    max-width: 330px;
+    width: 270px;
+    text-align: center !important;
+    padding-left: 4%;
+    padding-right: 0;
+}
+
+.categoriesTable tr:last-child td {
+    border-bottom: none;
+}
+
+.categoriesActionBtn {
+    border: none;
+    border-radius: 7px;
+    padding: 10px 22px;
+    font-size: var(--font-size-md);
+    font-weight: var(--font-weight-medium);
+    margin-right: 8px;
+    cursor: pointer;
+    transition: background 0.18s, color 0.18s;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    min-width: 90px;
+    box-shadow: none;
+}
+
+.categoriesEditBtn {
+    background: #fbeee6;
+    color: #e07a3f;
+    border: none;
+}
+
+.categoriesEditBtn:hover {
+    background: #f7e0d0;
+    color: #c96a2e;
+}
+
+.categoriesDeleteBtn {
+    background: #f9e6e6;
+    color: #d04a4a;
+    border: none;
+    border-radius: 7px;
+    min-width: 90px;
+    font-size: var(--font-size-md);
+    font-weight: var(--font-weight-medium);
+    padding: 10px 22px;
+    margin: 0 8px 0 0;
+    transition: background 0.18s, color 0.18s;
+    box-shadow: none;
+}
+
+.categoriesDeleteBtn:hover {
+    background: #f3d2d2;
+    color: #b13a3a;
+}
+
+.categoriesNoResults {
+    color: var(--secondary-text);
+    font-size: var(--font-size-md);
+    text-align: center;
+    margin: 32px 0 0 0;
+}
+
+.categoriesForm {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin-top: 8px;
+}
+
+.categoriesFormRow {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.categoriesFormInput {
+    border: 1.5px solid var(--light-gray-border);
+    border-radius: 7px;
+    padding: 10px 16px;
+    font-size: var(--font-size-md);
+    font-family: var(--font-family-primary);
+    color: var(--primary-text);
+    background: var(--card-background);
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.categoriesFormInput:focus {
+    border-color: var(--primary-accent);
+}
+
+.categoriesFormError {
+    color: var(--danger-red);
+    font-size: var(--font-size-sm);
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+.categoriesFormActions {
+    display: flex;
+    gap: 12px;
+    margin-top: 8px;
+}
+
+.categoriesFormSubmitBtn {
+    background: var(--primary-accent);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-weight: var(--font-weight-medium);
+    font-size: var(--font-size-md);
+    padding: 10px 22px;
+    cursor: pointer;
+    transition: background 0.18s;
+}
+
+.categoriesFormSubmitBtn:hover {
+    background: var(--primary-accent-darker);
+}
+
+.categoriesFormCancelBtn {
+    background: #f9f9f9;
+    color: var(--primary-accent);
+    border: 1.5px solid var(--primary-accent);
+    border-radius: 6px;
+    font-weight: var(--font-weight-medium);
+    font-size: var(--font-size-md);
+    padding: 10px 22px;
+    cursor: pointer;
+    transition: background 0.18s;
+}
+
+.categoriesFormCancelBtn:hover {
+    background: #ffeaea;
+    color: #d04a4a;
+}

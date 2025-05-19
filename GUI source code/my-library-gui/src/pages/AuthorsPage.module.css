@@ -1,0 +1,248 @@
+/* AuthorsPage.module.css - Styling for Authors management page, adapted from BooksPage styles */
+
+.authorsPageCard {
+    background: var(--card-background);
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    padding: 28px 28px 32px 28px;
+    margin: 0 auto;
+    max-width: 900px;
+    margin-bottom: 40px;
+}
+
+.authorsHeaderRow {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 24px;
+    width: 100%;
+}
+
+.authorsHeaderSpacer {
+    flex: 1 1 auto;
+}
+
+.authorsSearchBar {
+    flex: 1 1 38%;
+    min-width: 260px;
+    max-width: 420px;
+    background: var(--card-background);
+    border: 1.5px solid var(--light-gray-border);
+    border-radius: 999px;
+    padding: 10px 22px;
+    font-size: var(--font-size-md);
+    color: var(--primary-text);
+    font-family: var(--font-family-primary);
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.authorsSearchBar:focus {
+    border-color: var(--primary-accent);
+}
+
+.authorsAddBtn {
+    background: var(--primary-accent);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-weight: var(--font-weight-medium);
+    font-size: var(--font-size-md);
+    padding: 10px 22px;
+    cursor: pointer;
+    transition: background 0.18s;
+    box-shadow: 0 1px 2px rgba(246, 88, 103, 0.04);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.authorsAddBtn:hover {
+    background: var(--primary-accent-darker);
+}
+
+.authorsResultsPerPage {
+    margin-left: 18px;
+    font-size: var(--font-size-md);
+    color: var(--secondary-text);
+    font-family: var(--font-family-primary);
+    border: 1.5px solid var(--light-gray-border);
+    border-radius: 8px;
+    padding: 7px 16px;
+    background: #fff;
+    outline: none;
+    transition: border-color 0.2s;
+    min-width: 140px;
+    margin-right: 4px;
+}
+
+.authorsResultsPerPage:focus {
+    border-color: var(--primary-accent);
+}
+
+.authorsTableWrapper {
+    margin-top: 40px;
+    overflow-x: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.authorsTable {
+    width: auto;
+    min-width: 650px;
+    max-width: 100%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    table-layout: auto;
+}
+
+.authorsTable th,
+.authorsTable td {
+    padding-left: 28px;
+    padding-right: 28px;
+    border-bottom: 1px solid var(--light-gray-lines);
+    border-right: none;
+}
+
+.authorsTable th:not(:last-child),
+.authorsTable td:not(:last-child) {
+    border-right: none !important;
+}
+
+.authorsTable th.authorsIdCol,
+.authorsTable td.authorsIdCol {
+    text-align: center;
+}
+
+.authorsTable th:last-child,
+.authorsTable td:last-child {
+    min-width: 300px;
+    max-width: 350px;
+    width: 1%;
+    text-align: center;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+.authorsTable td:last-child {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid var(--light-gray-lines);
+    background: none;
+    text-align: center;
+    padding-left: 6%;
+    padding-right: 0;
+}
+
+.authorsTable th {
+    text-align: left;
+    font-weight: var(--font-weight-medium);
+    font-size: var(--font-size-md);
+    color: var(--primary-text);
+    background: #f9f9f9;
+    border-bottom: 2px solid var(--light-gray-lines);
+    padding: 12px 22px;
+}
+
+.authorsTable th.authorsIdCol {
+    color: var(--primary-text);
+    font-weight: 500;
+    font-family: var(--font-family-primary);
+    font-size: 15px;
+}
+
+.authorsTable td {
+    font-size: var(--font-size-md);
+    color: var(--primary-text);
+    padding: 10px 10px;
+    border-bottom: 1px solid var(--light-gray-lines);
+}
+
+.authorsTable td.authorsIdCol {
+    color: var(--primary-text);
+    font-weight: 500;
+    font-family: var(--font-family-primary);
+    font-size: 15px;
+    font-style: italic;
+}
+
+.authorsTable td.authorsNameCol {
+    font-weight: var(--font-weight-bold);
+    color: var(--primary-text);
+}
+
+.authorsTable tr:last-child td {
+    border-bottom: none;
+}
+
+.authorsActionBtn {
+    border: none;
+    border-radius: 5px;
+    padding: 8px 18px;
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    margin-right: 8px;
+    cursor: pointer;
+    transition: background 0.18s, color 0.18s;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.authorsEditBtn {
+    background: #fbeee6;
+    color: #e07a3f;
+}
+
+.authorsEditBtn:hover {
+    background: #f7e0d0;
+    color: #c96a2e;
+}
+
+.authorsDeleteBtn {
+    background: #f9e6e6;
+    color: #d04a4a;
+}
+
+.authorsDeleteBtn:hover {
+    background: #f3d2d2;
+    color: #b13a3a;
+}
+
+.authorsNoResults {
+    color: var(--secondary-text);
+    font-size: var(--font-size-md);
+    text-align: center;
+    margin: 32px 0 0 0;
+}
+
+.authorsForm {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin-top: 8px;
+}
+
+.authorsFormRow {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.authorsFormInput {
+    border: 1.5px solid var(--light-gray-border);
+    border-radius: 7px;
+    padding: 10px 16px;
+    font-size: var(--font-size-md);
+    font-family: var(--font-family-primary);
+    color: var(--primary-text);
+    background: var(--card-background);
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.authorsFormInput:focus {
+    border-color: var(--primary-accent);
+}

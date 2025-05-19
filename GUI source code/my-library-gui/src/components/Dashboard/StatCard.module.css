@@ -1,0 +1,119 @@
+/* Filepath: x:/Programming/Python/[Y2S2] Year 2, Spring semester/[Y2S2] Database Management Systems/Final project - Group assignment/my-library-gui/src/components/Dashboard/StatCard.module.css */
+.statCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: var(--spacing-md) var(--spacing-lg);
+    /* 16px 24px */
+    background: var(--card-background);
+    border-radius: var(--border-radius-xl);
+    /* 12px */
+    box-shadow: var(--card-box-shadow);
+    flex: 1 1 0;
+    /* Allow cards to grow and shrink in a flex container */
+    min-width: 140px;
+    /* Minimum width for a stat card */
+    box-sizing: border-box;
+}
+
+.statCardTop {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    margin-bottom: var(--spacing-sm);
+    /* 8px */
+}
+
+.statIconWrapper {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    margin-right: var(--spacing-md);
+    /* 16px */
+    border-radius: 50%;
+    /* Circular background for icon */
+    background-color: var(--stat-card-icon-default-bg);
+    /* Use new variable */
+    flex-shrink: 0;
+    transition: background-color var(--transition-fast);
+}
+
+/* Styling for the Material Symbol icon itself if passed as a child */
+.statIconWrapper>.material-symbols-outlined {
+    font-size: 23px;
+    /* Increased icon size */
+    color: var(--stat-card-icon-default-color);
+    /* Use new variable */
+    transition: color var(--transition-fast);
+    font-weight: 600;
+}
+
+/* Accent version for the icon wrapper */
+.statIconWrapper.accent {
+    background-color: var(--stat-card-icon-accent-bg);
+    /* Use new variable */
+}
+
+.statIconWrapper.accent>.material-symbols-outlined {
+    color: var(--stat-card-icon-accent-color);
+    /* Use new variable */
+}
+
+.statCardValue {
+    font-size: var(--font-size-h1);
+    /* L1 Prominent Heading (UI Phil: 28-36px, var is ~32px) */
+    font-weight: var(--font-weight-bold);
+    color: var(--primary-text);
+    line-height: 1;
+    /* Keep value tight */
+    flex-grow: 1;
+    text-align: right;
+    /* Align value to the right, common for stats */
+    padding-right: var(--spacing-md);
+    /* Increase right padding for better visual balance */
+}
+
+.statCardLabel {
+    margin-top: var(--spacing-xs);
+    /* 4px, reduced from App.css */
+    font-size: var(--font-size-sm);
+    /* L6 Secondary/Subtle (UI Phil: 12-14px, var is 14px) */
+    color: var(--secondary-text);
+    font-weight: var(--font-weight-regular);
+    width: 100%;
+    text-align: left;
+}
+
+.stackedStatLabel {
+    /* Inherit all statCardLabel styles */
+    margin-top: var(--spacing-xs);
+    font-size: var(--font-size-sm);
+    color: var(--secondary-text);
+    font-weight: var(--font-weight-regular);
+    width: 100%;
+    text-align: left;
+    /* Stacked cards specific tweaks */
+    display: block;
+    padding-top: 6%;
+}
+
+.boldLabel {
+    font-weight: var(--font-weight-bold);
+    color: var(--primary-text);
+    /* font-size: var(--font-size-md); */
+    font-size: 18px;
+}
+
+.statCardCustomContent {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 0;
+    /* Important for flex children to not overflow parent */
+    margin-top: var(--spacing-sm);
+}

@@ -1,0 +1,34 @@
+/* Pagination.module.css - Simple pagination controls for entity pages */
+
+.paginationWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin: 28px 0 0 0;
+}
+
+.paginationBtn {
+    background: #fff;
+    color: var(--primary-text);
+    border: 1.5px solid var(--light-gray-border);
+    border-radius: 6px;
+    font-size: var(--font-size-md);
+    font-family: var(--font-family-primary);
+    padding: 7px 16px;
+    cursor: pointer;
+    transition: background 0.18s, color 0.18s, border-color 0.18s;
+}
+
+.paginationBtn:disabled {
+    color: #bbb;
+    border-color: #eee;
+    background: #f7f7f7;
+    cursor: not-allowed;
+}
+
+.active {
+    background: var(--primary-accent);
+    color: #fff;
+    border-color: var(--primary-accent);
+}

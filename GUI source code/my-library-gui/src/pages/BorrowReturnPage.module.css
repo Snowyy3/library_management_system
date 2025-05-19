@@ -1,0 +1,167 @@
+/* BorrowReturnPage.module.css - Styling for Borrow & Return page, matching BooksPage and design philosophy */
+
+.borrowReturnPageCard {
+    background: var(--card-background);
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    padding: 28px 28px 32px 28px;
+    margin: 0 auto 40px auto;
+    max-width: 1320px;
+}
+
+.borrowReturnRow {
+    display: flex;
+    gap: 32px;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.borrowReturnSection {
+    flex: 1 1 0;
+    min-width: 340px;
+    background: var(--card-background);
+    border-radius: 10px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+    padding: 24px 24px 20px 24px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+}
+
+.borrowReturnDivider {
+    width: 2px;
+    background: var(--light-gray-border);
+    margin: 0 18px;
+    border-radius: 2px;
+    align-self: stretch;
+}
+
+.borrowReturnFormLabel {
+    font-family: var(--font-family-primary);
+    font-size: var(--font-size-sm);
+    color: var(--secondary-text);
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+
+.borrowReturnInput {
+    width: 100%;
+    padding: 10px 16px;
+    border: 1.5px solid var(--light-gray-border);
+    border-radius: 6px;
+    font-size: var(--font-size-md);
+    font-family: var(--font-family-primary);
+    color: var(--primary-text);
+    background: var(--card-background);
+    margin-bottom: 16px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.borrowReturnInput:focus {
+    border-color: var(--primary-accent);
+}
+
+.borrowReturnBtn {
+    background: var(--primary-accent);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-weight: var(--font-weight-medium);
+    font-size: var(--font-size-md);
+    padding: 10px 22px;
+    cursor: pointer;
+    transition: background 0.18s;
+    margin-top: 8px;
+}
+
+.borrowReturnBtn:disabled {
+    background: var(--disabled-bg);
+    color: var(--disabled-text);
+    cursor: not-allowed;
+}
+
+.borrowReturnStatus {
+    margin-top: 12px;
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+}
+
+/* Book Borrowers Lookup Table */
+.lookupCard {
+    background: var(--card-background);
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    padding: 28px 28px 32px 28px;
+    margin: 0 auto 40px auto;
+    max-width: 1320px;
+}
+
+.lookupHeaderRow {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 24px;
+    width: 100%;
+}
+
+.lookupInput {
+    flex: 1 1 38%;
+    min-width: 320px;
+    max-width: 520px;
+    background: var(--card-background);
+    border: 1.5px solid var(--light-gray-border);
+    border-radius: 999px;
+    padding: 10px 22px;
+    font-size: var(--font-size-md);
+    color: var(--primary-text);
+    font-family: var(--font-family-primary);
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.lookupInput:focus {
+    border-color: var(--primary-accent);
+}
+
+.lookupTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 12px;
+    font-size: var(--font-size-md);
+    color: var(--primary-text);
+}
+
+.lookupTable th {
+    text-align: left;
+    font-weight: 500;
+    padding: 10px 8px;
+    border-bottom: 2px solid var(--light-gray-border);
+    background: var(--table-header-bg, #fafbfc);
+    color: var(--primary-text) !important;
+    font-style: normal !important;
+    text-align: center;
+}
+
+.lookupTable td {
+    padding: 10px 8px;
+    border-bottom: 1px solid var(--light-gray-border);
+    text-align: center;
+}
+
+.lookupNoBorrowers {
+    color: var(--secondary-text);
+    font-style: italic;
+    margin-top: 10px;
+}
+
+@media (max-width: 900px) {
+    .borrowReturnRow {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .borrowReturnSection {
+        margin-bottom: 24px;
+    }
+}

@@ -1,0 +1,34 @@
+/* filepath: x:\Programming\Python\[Y2S2] Year 2, Spring semester\[Y2S2] Database Management Systems\Final project - Group assignment\my-library-gui\src\App.css */
+
+/* 
+  Most styles from the original App.css are now handled by 
+  global.css, component-specific CSS modules, or layout CSS modules.
+*/
+
+/* Keep any genuinely app-wide styles here if they don't fit elsewhere, 
+   but for now, it will be mostly empty. */
+
+/* 
+  The following styles from the original App.css are removed:
+  - #root (max-width, margin, padding, text-align, background-color)
+  - .logo, .logo:hover, .logo.react:hover
+  - @keyframes logo-spin
+  - @media (prefers-reduced-motion: no-preference)
+  - .card (basic padding, now handled by .card-base in global.css or component styles)
+  - .read-the-docs
+*/
+
+/* 
+  Dashboard-specific styles previously here have been MOVED to their respective 
+  component CSS Modules (StatCard.module.css, DashboardSummaryLists.module.css, etc.).
+*/
+
+/* REMOVED .stat-card and related styles */
+/* REMOVED .dashboard-summary-list and related styles */
+/* REMOVED .dashboard-list-title */
+/* REMOVED .dashboard-summary-table and related styles */
+/* REMOVED .popular-books-list and related styles */
+/* REMOVED .dashboard-content-card */
+/* REMOVED .dashboard-summary-list .overdue-days, .dashboard-summary-table .overdue-days */
+
+/* Remove background overrides as global.css and layout css handle this */
