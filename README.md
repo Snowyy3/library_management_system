@@ -17,19 +17,30 @@ The system leverages the power of **MySQL** for data persistence, a **Python (Fa
 Our system offers a range of functionalities essential for modern library management:
 
 *   **Interactive Dashboard:** Get an at-a-glance overview of key library statistics, including total books, readers, categories, authors, currently borrowed items, overdue books, popular titles, and borrowing trends with visual charts.
-    *   *(Screenshot of the main Dashboard page - similar to your `dashboard_full_page_1.png`)*
+![image](https://github.com/user-attachments/assets/6ee45694-b8f7-4d0c-a963-d848c291eb54)
+![image](https://github.com/user-attachments/assets/d84a6c23-3f86-466a-809f-b93649170181)
+![image](https://github.com/user-attachments/assets/9ae4f9e4-9e47-4092-8821-54b013c4491c)
+
+
 *   **Comprehensive Book Management:** Easily add, search, view, edit, and delete books. Includes advanced features like handling historical borrowing records during deletion and detailed book information display.
-    *   *(Screenshot of the Books Management page - similar to your `books_management_page.png`)*
+![image](https://github.com/user-attachments/assets/614dc0b0-3457-433e-aa6c-2d1580369625)
+
 *   **Efficient Author & Category Management:** Streamlined interfaces for managing authors and book categories with full CRUD capabilities and search/sort functionality.
-    *   *(Composite screenshot showing Author Management and Category Management side-by-side or one prominent one)*
+![image](https://github.com/user-attachments/assets/69bd0521-6f63-40fa-a061-f372502b78a3)
+![image](https://github.com/user-attachments/assets/b1b38049-441f-4cea-8081-e7d50abc8af5)
+
 *   **Detailed Reader Management:** Register new readers, update existing information, and manage reader records, complete with search, sort, and CRUD operations.
-    *   *(Screenshot of the Readers Management page)*
+![image](https://github.com/user-attachments/assets/c459fe54-5ce8-4536-9afb-78954309b72a)
+
 *   **Seamless Borrowing & Returning:** Intuitive forms for processing book borrows and returns, with clear feedback and integration with inventory management. Includes a lookup feature to see current borrowers for any book.
-    *   *(Screenshot of the Borrow/Return page with all three cards visible)*
+![image](https://github.com/user-attachments/assets/adc2dbe4-02e9-47f8-b3ec-98a7a4456880)
+
 *   **Insightful Statistical Reporting:** Access various reports including Available Books, Currently Borrowed Books, Overdue Books (with adjustable loan periods), and Popular Books.
-    *   *(Screenshot of the Reports page, perhaps showing the "Available Books" or "Overdue Books" tab)*
+![image](https://github.com/user-attachments/assets/cf825af1-5cf5-4916-88dd-1df02839a239)
+
 *   **User Authentication:** Secure login, signup, and password reset functionalities for librarians.
-    *   *(Screenshot of the Login page)*
+![image](https://github.com/user-attachments/assets/8da475b4-e0a2-45d9-aee8-7316975096bb)
+
 
 ---
 
