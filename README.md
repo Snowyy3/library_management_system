@@ -111,7 +111,8 @@ The repository is organized as follows:
 ## 🚀 Project Presentation
 
 View our comprehensive video presentation demonstrating the system's features and technical implementation:
-**YouTube video**
+
+**[LibSys: From Database Design to a Full-Featured Library App │ DBMS Project, Group 1](https://youtu.be/fzxclHYIyzE)**
 
 ---
 
